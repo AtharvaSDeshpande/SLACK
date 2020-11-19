@@ -1,8 +1,9 @@
 .sidebar{
     
-    width: 30vw;
-    height: 93vh;
-    
+    width: 30%;
+    height: 610px;
+    left: 0;
+    position: sticky;
    
     background-color:rgba(92, 2, 92, 1);
 }
@@ -15,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5vh;
+    height: 35px;
     background-color:rgba(92, 2, 92, 1);
     top: 0;
     position: sticky;
@@ -26,19 +27,20 @@
     font-size: large;
     display: inline;
     margin-left: 10px;
-    font-size: auto;
+    font-size: large;
     text-overflow: ellipsis;
     
 }
 .sidebar__header > .MuiSvgIcon-root {
     margin: 10px;
+    margin-right: 20px;
     color: whitesmoke;
     cursor: pointer;
    
 }
 .sidebar__channels {
     margin: 10px;
-    height: 81vh;
+    height: 500px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-color: white;
@@ -50,3 +52,16 @@
 .sidebar__channels > b {
     margin-bottom: 10px !important;
 }
+
+
+@media(max-width:600px){
+    .sidebar__header__title {
+        font-weight: bold;
+        font-size: large;
+        display: inline;
+        margin-left: 10px;
+        font-size: small;
+        text-overflow: ellipsis;
+        
+    }
+  }

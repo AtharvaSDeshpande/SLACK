@@ -21,7 +21,7 @@ function Channel() {
     }
     const send = (e) => {
         e.preventDefault();
-        if (input!='')
+        if (input!=='')
         {
             db.collection("channels").doc(channelId).collection("messages").add(
                 {
@@ -55,10 +55,13 @@ function Channel() {
             <div className = "channel__messages">
                 
                 {messages.map(message=>(
-                    <Messages sendersName = {user.displayName} message = {message.message} photoURL = {message.photoURL} email = {message.email} timestamp = {message.timestamp}/>
+                    <Messages sendersName = {message.name} message = {message.message} photoURL = {message.photoURL} email = {message.email} timestamp = {message.timestamp}/>
                 ))}
                 {/* <Messages sendersName = "Anonymous" message = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aut perspiciatis, laudantium officia aliquam voluptatum cupiditate dolore quasi consectetur quo magnam distinctio numquam dicta iste rerum nihil veritatis praesentium obcaecati."/>
-                <Messages sendersName = "Atharva Deshpande" message = "Whats Up"/> */}
+                <Messages sendersName = "Atharva Deshpande" message = "Whats Up"/>
+                */}
+                
+
 
             </div>
 
