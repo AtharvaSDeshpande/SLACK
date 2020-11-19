@@ -1,5 +1,6 @@
 .main {
     display: flex;
+    
 }
 
 .main__info{
@@ -16,4 +17,7 @@
     
     margin: 30px;
     margin-top: 10% !important;
+}
+.main__info > p {
+    text-align: center;
 }

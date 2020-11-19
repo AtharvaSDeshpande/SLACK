@@ -1,13 +1,20 @@
 import React from 'react';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import HistoryIcon from '@material-ui/icons/History';
+
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import './Header.css';
 import { Avatar, Tooltip } from '@material-ui/core';
 import { useStateValue } from './StateProvider';
+import { choices } from './reducer';
 function Header() {
-    const [{user},dispatch] = useStateValue()
+    const [{user},dispatch] = useStateValue();
+    const logout = () => {
+        dispatch ({
+           type: choices.RESET_USER,
+           user: null 
+        })
+    } 
     return (
         <div className="header">
             <div className="header__left">
@@ -17,9 +24,7 @@ function Header() {
                 <Tooltip title="Forward">
                     <ArrowForwardIcon className="header__left__frontIcon" />
                 </Tooltip>
-                <Tooltip title="History">
-                    <HistoryIcon className="header__left__historyIcon" />
-                </Tooltip>
+                
 
                 
                 
@@ -36,7 +41,7 @@ function Header() {
                 </Tooltip>
                 <div>
                    <Tooltip title="logout">
-                   <Avatar className="header__right__avatar" src = {user?.photoURL}/> 
+                   <Avatar className="header__right__avatar" src = {user?.photoURL} onClick = {logout}/> 
                 </Tooltip> 
                 </div>
                 

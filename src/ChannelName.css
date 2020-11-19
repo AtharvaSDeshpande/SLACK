@@ -7,7 +7,15 @@
 .channelName :hover {
     background-color: rgb(75, 11, 75);
 }
+
+
 .channelName__link{
     text-decoration: none;
     color: black;
 }
+
+@media(max-width:650px){
+    .channelName__link > p{
+        font-size: small;
+    }
+  }

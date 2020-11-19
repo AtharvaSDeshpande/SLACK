@@ -1,13 +1,15 @@
 .channel{
     flex: 80%;
-    height: 93vh;
-    
+    height: 610px;
+    width:  70%;
+    right: 0;
+    position: sticky;
     
 }
 
 .channel__header {
 
-    height: 5vh;
+    height: 35px;
     padding: 10px;
     border-bottom: 1px solid lightgray;
     display: flex;
@@ -16,8 +18,11 @@
     top: 0;
     z-index: 100;
     background-color: #fff;
+    align-items: center;
 }
-
+.channel__header > h1 {
+   font-size: 40px;
+}
 .channel__header   .MuiSvgIcon-root {
     margin: 10px;
     color: grey;
@@ -25,7 +30,7 @@
 
 .channel__messages {
 
-    height: 75vh;
+    height: 490px;
     
    z-index: 1;
    overflow-y: scroll;
@@ -53,7 +58,7 @@
     border: 2px solid blue;
     border-radius: 10px;
     background-color: white;
-    height: 5vh;
+    height: 35px;
     width: 95%;
     flex: 99%;
 }
@@ -64,3 +69,10 @@
     flex: 1%;
 
 }
+
+@media(max-width:600px){
+    .channel__header > h1 {
+        font-size: 20px;
+        
+     }
+  }
