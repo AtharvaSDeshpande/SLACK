@@ -1,0 +1,13 @@
+.channelName {
+    color: white;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.channelName :hover {
+    background-color: rgb(75, 11, 75);
+}
+.channelName__link{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,36 @@
+.login {
+    width: 100vw;
+    background-color: rgb(226, 192, 248);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.login__box {
+display: grid;
+place-items: center;
+border: 1px solid black;
+background-color: #fff;
+
+}
+.login__box > * {
+    margin: 10px;
+}
+.login__box > img {
+    object-fit: contain;
+    height: 45px;
+}
+.login__box > p {
+    color: gray;
+}
+
+.login__box > input {
+    border: 2px solid rgb(0, 162, 255);
+    width: 80%;
+    /* height: 20px; */
+    padding: 10px;
+    font-size: large;
+    color: rgb(0, 162, 255);
+    cursor: pointer;
+    
+}

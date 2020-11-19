@@ -1,0 +1,66 @@
+.channel{
+    flex: 80%;
+    height: 93vh;
+    
+    
+}
+
+.channel__header {
+
+    height: 5vh;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    position:  sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.channel__header   .MuiSvgIcon-root {
+    margin: 10px;
+    color: grey;
+}
+
+.channel__messages {
+
+    height: 75vh;
+    
+   z-index: 1;
+   overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+/* .channel__send {
+    position: sticky;
+    z-index: 100;
+    bottom: 10px;
+    margin: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: white;
+    height: 5vh;
+} */
+.channel__send >form{
+    display: flex;
+}
+.channel__send >form> input {
+    position: sticky;
+    z-index: 100;
+    bottom: 10px;
+    margin: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: white;
+    height: 5vh;
+    width: 95%;
+    flex: 99%;
+}
+
+.channel__send > form > button {
+    visibility: hidden;
+   
+    flex: 1%;
+
+}

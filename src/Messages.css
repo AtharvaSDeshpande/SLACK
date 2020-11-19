@@ -1,0 +1,18 @@
+.messages{
+   margin: 5px;
+   margin-left: 10px;
+   display: flex;
+}
+
+.messages__details {
+   margin-left: 10px;
+}
+
+.message__details__senders__nameAndTime{
+   display: flex;
+}
+.message__details__senders__nameAndTime > p {
+   color: gray;
+   margin-left: 10px;
+   font-size: small;
+}

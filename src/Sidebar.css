@@ -1,0 +1,52 @@
+.sidebar{
+    
+    width: 30vw;
+    height: 93vh;
+    
+   
+    background-color:rgba(92, 2, 92, 1);
+}
+.sidebar__header{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    background-color:rgba(92, 2, 92, 1);
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+.sidebar__header__title {
+    font-weight: bold;
+    font-size: large;
+    display: inline;
+    margin-left: 10px;
+    font-size: auto;
+    text-overflow: ellipsis;
+    
+}
+.sidebar__header > .MuiSvgIcon-root {
+    margin: 10px;
+    color: whitesmoke;
+    cursor: pointer;
+   
+}
+.sidebar__channels {
+    margin: 10px;
+    height: 81vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: white;
+    
+    
+    
+}
+
+.sidebar__channels > b {
+    margin-bottom: 10px !important;
+}
