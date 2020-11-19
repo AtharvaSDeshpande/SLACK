@@ -8,4 +8,4 @@ This App is deployed on : https://slack-e2dd9.web.app/
 
 In order to install all the dependencies, after cloning the app, run
 
-  *npm run build*
+  **npm install**
