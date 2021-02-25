@@ -8,6 +8,7 @@ import { Avatar, Tooltip } from '@material-ui/core';
 import { useStateValue } from './StateProvider';
 import { choices } from './reducer';
 import db from './firebase';
+import { Link } from 'react-router-dom';
 function Header() {
     const [{user},dispatch] = useStateValue();
     const logout = () => {
@@ -51,9 +52,12 @@ function Header() {
                     <HelpOutlineIcon className="header__left__helpIcon" />
                 </Tooltip>
                 <div>
-                   <Tooltip title="logout">
+                <Link to = "/">
+                <Tooltip title="logout">
                    <Avatar className="header__right__avatar" src = {user?.photoURL} onClick = {logout}/> 
                 </Tooltip> 
+                </Link>
+                
                 </div>
                 
                 

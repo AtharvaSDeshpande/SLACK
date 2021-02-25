@@ -12,8 +12,9 @@ function App() {
     <div className="app">
       {(user) ? (
         <div>
-          <Header/>
+          
           <Router>
+            <Header/>
             <Main/>
           </Router>
           
