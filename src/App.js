@@ -7,7 +7,7 @@ import { useStateValue } from './StateProvider';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   const [{user},dispatch] = useStateValue();
-  console.log("user",user);
+  // console.log("user",user);
   return (
     <div className="app">
       {(user) ? (

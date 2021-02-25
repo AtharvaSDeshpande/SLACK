@@ -1,5 +1,5 @@
 import React from 'react'
-import { auth, provider } from './firebase'
+import  { auth, provider } from './firebase'
 import './Login.css'
 import { choices } from './reducer';
 import { useStateValue } from './StateProvider'
@@ -12,12 +12,14 @@ function Login() {
                 type: choices.SET_USER,
                 user: result.user,
             })
-        }).catch((error) => alert(error.message));;
+            
+        }).catch((error) => alert(error.message));
+        
     }
     return (
         <div className = "login">
             <div className = "login__box">
-                <img src = {slacklogo}/>
+                <img src = {slacklogo} alt = "Slack-logo"/>
                 <h1>Sign in to Slack</h1>
                 <p>Continue with Google account.</p>
                 <input type = "button" value = "Continue with Google" onClick = {signin}/>

@@ -1,6 +1,6 @@
 .sidebar{
     
-    width: 30%;
+    width: 30vw;
     height: 610px;
     left: 0;
     position: sticky;
@@ -31,16 +31,21 @@
     text-overflow: ellipsis;
     
 }
-.sidebar__header > .MuiSvgIcon-root {
+.sidebar__header > div 
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.sidebar__header > div > .MuiSvgIcon-root {
     margin: 10px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     color: whitesmoke;
     cursor: pointer;
    
 }
 .sidebar__channels {
     margin: 10px;
-    height: 500px;
+    height: 250px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-color: white;
@@ -63,5 +68,12 @@
         font-size: small;
         text-overflow: ellipsis;
         
+    }
+    .sidebar__header > div > .MuiSvgIcon-root {
+        margin: 1px;
+        /* margin-right: 20px; */
+        color: whitesmoke;
+        cursor: pointer;
+       
     }
   }

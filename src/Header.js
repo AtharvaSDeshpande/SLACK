@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
@@ -7,6 +7,7 @@ import './Header.css';
 import { Avatar, Tooltip } from '@material-ui/core';
 import { useStateValue } from './StateProvider';
 import { choices } from './reducer';
+import db from './firebase';
 function Header() {
     const [{user},dispatch] = useStateValue();
     const logout = () => {
@@ -14,7 +15,17 @@ function Header() {
            type: choices.RESET_USER,
            user: null 
         })
-    } 
+    }
+    useEffect(()=>{
+        if (user?.email !== " ")
+        {
+            db.collection("users").doc(user.email).set({
+                email: user.email,
+                name: user.displayName,
+                photoURL: user.photoURL
+            })
+        }
+    },[])
     return (
         <div className="header">
             <div className="header__left">
