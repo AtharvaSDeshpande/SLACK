@@ -42,6 +42,7 @@ function Channel() {
             setSendPlaceholder("Send a message to #" + channelName);
         }
     },[channelId,channelName])
+   
     return (
         <div className = "channel">
             <div className = "channel__header">
