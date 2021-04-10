@@ -62,13 +62,14 @@ function Sidebar() {
                 
                 
             </div>
-            <div className = "sidebar__channels">
             <div className = "sidebar__header">
                 <p className = "sidebar__header__title">Channels: </p>
                 <Tooltip title = "New Channel">
                     <AddBoxIcon onClick = {addNewChannel}/>
                 </Tooltip>
             </div>
+            <div className = "sidebar__channels">
+           
                 
                 {channels.map(channel=>(
                     
@@ -77,13 +78,14 @@ function Sidebar() {
                    
                 ))}
             </div>
-            <div className = "sidebar__channels">
             <div className = "sidebar__header">
                 <p className = "sidebar__header__title">Messages: </p>
                 <Tooltip title = "New Conversation">
                     <AddIcon onClick = {addNewFriend}/>
                 </Tooltip>
                 </div>
+            <div className = "sidebar__channels">
+            
                 {friends.map(channel=>(
                         <FriendName id = {channel.id} name = {channel.data.name}/>
                 ))}

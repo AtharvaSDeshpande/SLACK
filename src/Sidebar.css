@@ -59,7 +59,7 @@
     font-weight: bold;
     font-size: large;
     display: inline;
-    margin: 10px;
+    margin: 10px  !important;
     font-size: large;
     text-overflow: ellipsis;
     
@@ -71,7 +71,7 @@
 
 }
 .sidebar__header >  .MuiSvgIcon-root {
-    margin: 10px;
+    margin: 1px;
     /* margin-right: 20px; */
     color: whitesmoke;
     cursor: pointer;
@@ -79,7 +79,7 @@
 }
 .sidebar__channels {
     margin: 10px;
-    height: 250px;
+    height: 210px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-color: purple;
