@@ -57,20 +57,18 @@ function Sidebar() {
     },[]);
     return (
         <div className = "sidebar">
-            <div className = "sidebar__header">
+            <div className = "sidebar__header highlight">
                 <p className = "sidebar__header__title">Workspace</p>
-                <div>
-                    <Tooltip title = "New Conversation">
-                    <AddIcon onClick = {addNewFriend}/>
-                </Tooltip>
-                <Tooltip title = "New Channel">
-                    <AddBoxIcon onClick = {addNewChannel}/>
-                </Tooltip>
-                </div>
+                
                 
             </div>
             <div className = "sidebar__channels">
-                <b>Channels : </b>
+            <div className = "sidebar__header">
+                <p className = "sidebar__header__title">Channels: </p>
+                <Tooltip title = "New Channel">
+                    <AddBoxIcon onClick = {addNewChannel}/>
+                </Tooltip>
+            </div>
                 
                 {channels.map(channel=>(
                     
@@ -80,7 +78,12 @@ function Sidebar() {
                 ))}
             </div>
             <div className = "sidebar__channels">
-                <b>Messages : </b>
+            <div className = "sidebar__header">
+                <p className = "sidebar__header__title">Messages: </p>
+                <Tooltip title = "New Conversation">
+                    <AddIcon onClick = {addNewFriend}/>
+                </Tooltip>
+                </div>
                 {friends.map(channel=>(
                         <FriendName id = {channel.id} name = {channel.data.name}/>
                 ))}

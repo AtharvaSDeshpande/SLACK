@@ -18,9 +18,15 @@ function Main() {
                 </Route>
                 <Route path = "/">
                     <div className = "main__info">
-                        <img src = {slacklogo} alt = "Slack-Logo"/>
+                        <div>
+                             <div className = "main__info__logo">
+                                  <img src = {slacklogo} alt = "Slack-Logo"/>
+                             </div>
+                            
                         <p>This is a slack clone created using React js. The channels created here are common to all the users. You can create a new channel or start a new conversation. To create a new channel/start a new conversation select the respective icon from the sidebar. Or select the required channel/conversation.  </p>
-                    </div>
+                    
+                        </div>
+                       </div>
                 </Route>
                 
             </Switch>

@@ -35,6 +35,7 @@
    z-index: 1;
    overflow-y: scroll;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 
 }
 /* .channel__send {

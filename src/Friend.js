@@ -75,7 +75,7 @@ function Friend() {
                 </Tooltip>
                
                 <div>
-                    <PersonAddIcon/>
+                    {/* <PersonAddIcon/> */}
                     <InfoIcon/>
 
                 </div>

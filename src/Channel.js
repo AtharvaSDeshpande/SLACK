@@ -49,7 +49,7 @@ function Channel() {
                 {channelName?(<h1>{channelName}</h1>):( <h1>Channel Name</h1>)}
                 <div>
                     <PersonAddIcon/>
-                    <InfoIcon/>
+                    {/* <InfoIcon/> */}
 
                 </div>
             </div>
