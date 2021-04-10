@@ -53,7 +53,7 @@ function Header() {
                 </Tooltip>
                 <div>
                 <Link to = "/">
-                <Tooltip title="logout">
+                <Tooltip title="Logout">
                    <Avatar className="header__right__avatar" src = {user?.photoURL} onClick = {logout}/> 
                 </Tooltip> 
                 </Link>

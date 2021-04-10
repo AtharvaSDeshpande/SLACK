@@ -6,6 +6,7 @@ import Messages from './Messages';
 import { useStateValue } from './StateProvider';
 import { useParams } from 'react-router-dom';
 import db, { timeStamp } from './firebase';
+import { Tooltip } from '@material-ui/core';
 function Friend() {
     const {friendId} = useParams();
     const [channelName,setChannelName] = useState();
@@ -55,10 +56,24 @@ function Friend() {
             setSendPlaceholder("Send a message to #" + channelName);
         }
     },[friendId,channelName])
+    const rename = () => {
+        const newName = prompt("Enter new name");
+        if (newName)
+        {
+          db.collection("users").doc(user.email).collection("friends").doc(friendId).set({
+            name: newName
+        })  
+        }
+        
+        //onSnapshot(snapshot=>(setChannelName(snapshot.data().name)));
+    }
     return (
         <div className = "channel">
             <div className = "channel__header">
-                {channelName?(<h1>{channelName}</h1>):( <h1>Channel Name</h1>)}
+                <Tooltip title = "Rename">
+                    {channelName?(<h1 onClick = {rename}>{channelName}</h1>):( <h1 onClick = {rename}>Channel Name</h1>)}
+                </Tooltip>
+               
                 <div>
                     <PersonAddIcon/>
                     <InfoIcon/>
