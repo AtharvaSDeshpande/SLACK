@@ -2,7 +2,7 @@
 .sidebar{
     
     width: 30vw;
-    height: auto;
+    height: 610px;
     left: 0;
     position: sticky;
    
@@ -15,7 +15,7 @@
   }
 
   ::-webkit-scrollbar:hover {
-    width: 10px;
+    width: px;
   }
 
   

@@ -80,7 +80,7 @@ function Sidebar() {
                 ))}
             </div>
             <div className = "sidebar__channels">
-                <b>Direct Messages : </b>
+                <b>Messages : </b>
                 {friends.map(channel=>(
                         <FriendName id = {channel.id} name = {channel.data.name}/>
                 ))}
