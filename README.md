@@ -6,6 +6,6 @@ The master branch of this repo is linked with FIrebase Hosting. All successfull 
 
 This App is deployed on : https://slack-e2dd9.web.app/
 
-In order to install all the dependencies, after cloning the app, run
+To install all the dependencies, after cloning the app, run
 
   **npm install**
